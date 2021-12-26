@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <h1>Sorting hat app version 0.1 (dont worry this will be an app in the future)</h1>
+    </head>
+    <body>
+      <button id="message_1">Message 1</button>
+      <br><br>
+      <button id="message_2">Message 2</button>
+      <br><br>
+      <button id="message_3">Message 3</button>
+      <br><br>
+      <button id="message_4">Message 4</button>
+      <br><br>
+      <button id="message_5">Message 5</button>
+      <br><br>
+      <button id="message_6 (coming soon)">Message 6</button>
+      <br><br>
+      <br><br>
+      <button id="stop">Stop</button>
+    </body>
+    <script>
+      var url = $url$
+
+      function add_button_listener(button_id) {
+        const button = document.getElementById(button_id);
+        button.addEventListener('click', async _ => {
+          var xhr = new XMLHttpRequest();
+          xhr.open("POST", url, true);
+          xhr.timeout = 1000
+          xhr.setRequestHeader('Content-Type', 'application/json');
+          xhr.send(JSON.stringify({"utterance": button_id}));
+        })
+      }
+
+      var buttons = document.getElementsByTagName("button")
+      for (let i = 0; i < buttons.length; ++i) {
+        add_button_listener(buttons[i].id)
+      }
+
+    </script>
+</html>
