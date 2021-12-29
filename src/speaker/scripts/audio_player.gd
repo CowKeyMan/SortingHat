@@ -16,7 +16,6 @@ func play_sound(text):
 
 func load_stream_dict():
 	var dir = Directory.new()
-	print('hi')
 	if dir.open("res://sounds") == OK:
 		dir.list_dir_begin()
 		var file_name = dir.get_next()

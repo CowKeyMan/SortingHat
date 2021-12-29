@@ -2,7 +2,8 @@ extends Control
 
 signal text_changed(text)
 
-onready var text_edit = $TextEdit
+onready var text_edit = $MarginContainer/VSplitContainer/VBoxContainer/TextEdit
+onready var connected = $MarginContainer/VSplitContainer/Connected
 
 func _ready():
 	text_edit.connect("text_changed", self, "_on_TextEdit_text_changed")
@@ -12,3 +13,11 @@ func _on_TextEdit_text_changed():
 
 func get_text():
 	return text_edit.text
+
+func set_connected():
+	connected.bbcode_text = "[center]Connected[/center]"
+	connected.modulate = "23d80e"
+	
+func set_disconnected():
+	connected.bbcode_text = "[center]Disconnected[/center]"
+	connected.modulate = "d80e0e"
