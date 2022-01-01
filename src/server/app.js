@@ -14,7 +14,7 @@ var utterance = ""
 var public_ip = get_my_public_ip()
 
 app.listen(port, "0.0.0.0", () => {
-  console.log(`Example app listening at port ${port}`)
+  console.log(`Example app listening at ${public_ip}:${port}`)
 })
 
 app.get('/', (req, res) => {
