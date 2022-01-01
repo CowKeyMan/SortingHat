@@ -10,10 +10,8 @@ onready var ui = $UI
 
 var random_no = 0;
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
 	ping.set_url(_format_url(ui.get_text()))
-# warning-ignore:return_value_discarded
 	ui.connect("text_changed", self, "_on_TextBox_text_changed")
 	ping.connect("uttering_received", self, "_on_Ping_uttering_recieved")
 	ping.connect("request_error", ui, "set_disconnected")

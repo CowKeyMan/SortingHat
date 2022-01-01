@@ -2,8 +2,8 @@ extends Control
 
 signal text_changed(text)
 
-onready var text_edit = $MarginContainer/VSplitContainer/VBoxContainer/TextEdit
-onready var connected = $MarginContainer/VSplitContainer/Connected
+onready var text_edit = $VBoxContainer/TextEdit
+onready var connected = $Connected
 
 func _ready():
 	text_edit.connect("text_changed", self, "_on_TextEdit_text_changed")

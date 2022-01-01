@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/text_box.gd" type="Script" id=1]
 [ext_resource path="res://fonts/Wizardry Night.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://images/ceremony_screenshot.png" type="Texture" id=3]
+[ext_resource path="res://scripts/exit_on_press.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 58
@@ -34,35 +35,22 @@ position = Vector2( 491, 290 )
 scale = Vector2( 0.591682, 0.591682 )
 texture = ExtResource( 3 )
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 20.0
-margin_top = 20.0
-margin_right = -20.0
-margin_bottom = -20.0
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -492.0
+margin_top = 18.0
+margin_right = 492.0
+margin_bottom = 218.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VSplitContainer" type="VSplitContainer" parent="MarginContainer"]
+[node name="Label" type="Label" parent="VBoxContainer"]
 margin_right = 984.0
-margin_bottom = 560.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-split_offset = -100
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VSplitContainer"]
-margin_right = 984.0
-margin_bottom = 174.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Label" type="Label" parent="MarginContainer/VSplitContainer/VBoxContainer"]
-margin_right = 984.0
-margin_bottom = 85.0
+margin_bottom = 98.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Enter <IP address>:<port> of server here:"
@@ -71,20 +59,42 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextEdit" type="TextEdit" parent="MarginContainer/VSplitContainer/VBoxContainer"]
-margin_top = 89.0
+[node name="TextEdit" type="TextEdit" parent="VBoxContainer"]
+margin_top = 102.0
 margin_right = 984.0
-margin_bottom = 174.0
+margin_bottom = 200.0
 size_flags_vertical = 3
 custom_colors/font_color = Color( 0.211765, 0.419608, 0.894118, 1 )
 custom_styles/normal = SubResource( 3 )
 text = "255.255.255.255:3000"
 
-[node name="Connected" type="RichTextLabel" parent="MarginContainer/VSplitContainer"]
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -107.0
+margin_top = -125.0
+margin_right = 109.0
+margin_bottom = -38.0
+size_flags_horizontal = 3
+size_flags_vertical = 2
+text = "Exit"
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Connected" type="RichTextLabel" parent="."]
 modulate = Color( 0.917969, 0, 0, 1 )
-margin_top = 186.0
-margin_right = 984.0
-margin_bottom = 560.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -378.5
+margin_top = -59.5
+margin_right = 378.5
+margin_bottom = 89.5
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/normal_font = SubResource( 4 )

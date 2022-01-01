@@ -10,9 +10,7 @@ func set_url(new_url):
 	url = new_url
 
 func _ready():
-# warning-ignore:return_value_discarded
 	$Request.connect("request_completed", self, "_on_request_completed")
-# warning-ignore:return_value_discarded
 	$Timer.connect("timeout", self, "_on_timer_timeout")
 
 func _on_timer_timeout():
