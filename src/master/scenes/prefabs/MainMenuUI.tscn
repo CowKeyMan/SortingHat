@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://fonts/Wizardry Night.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://scripts/ui.gd" type="Script" id=2]
+[ext_resource path="res://scripts/main_menu_ui.gd" type="Script" id=2]
 [ext_resource path="res://scripts/exit_on_press.gd" type="Script" id=3]
 [ext_resource path="res://images/hogwarts.jpg" type="Texture" id=4]
 [ext_resource path="res://scenes/prefabs/SortingHat.tscn" type="PackedScene" id=5]
@@ -18,7 +18,7 @@ default_font = SubResource( 1 )
 
 [sub_resource type="StyleBoxEmpty" id=3]
 
-[node name="UI" type="Control"]
+[node name="MainMenuUI" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2

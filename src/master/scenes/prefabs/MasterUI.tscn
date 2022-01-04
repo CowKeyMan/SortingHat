@@ -1,0 +1,231 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://fonts/Wizardry Night.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/master_ui.gd" type="Script" id=2]
+[ext_resource path="res://images/great_hall.jpg" type="Texture" id=4]
+[ext_resource path="res://images/ravenclaw.png" type="Texture" id=5]
+[ext_resource path="res://images/gryffindor.png" type="Texture" id=6]
+[ext_resource path="res://images/hufflepuff.png" type="Texture" id=7]
+[ext_resource path="res://images/slytherin.png" type="Texture" id=8]
+[ext_resource path="res://images/text_data.gd" type="Script" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 58
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.529412, 0, 0, 0.792157 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.3, 0, 0, 0.854902 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 0.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
+bg_color = Color( 0.0823529, 0.0823529, 0.0823529, 0.54902 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.0470588, 0.0470588, 0.0470588, 0.74902 )
+
+[node name="MasterUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource( 2 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 7
+size_flags_vertical = 7
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Back" type="Button" parent="."]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 216.0
+margin_bottom = 87.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 2
+text = "back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stop" type="Button" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -98.0
+margin_top = 20.0
+margin_right = 98.0
+margin_bottom = 67.0
+focus_mode = 0
+size_flags_horizontal = 3
+size_flags_vertical = 2
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/normal = SubResource( 5 )
+text = "Stop"
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+utterance = "Stop"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 105.0
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSplitContainer" type="VSplitContainer" parent="ScrollContainer"]
+margin_right = 1024.0
+margin_bottom = 495.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+dragger_visibility = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Houses" type="MarginContainer" parent="ScrollContainer/VSplitContainer"]
+margin_right = 1024.0
+margin_bottom = 241.0
+rect_min_size = Vector2( 0, 200 )
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/margin_right = 70
+custom_constants/margin_left = 70
+
+[node name="GridContainer" type="HBoxContainer" parent="ScrollContainer/VSplitContainer/Houses"]
+margin_left = 70.0
+margin_right = 954.0
+margin_bottom = 241.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Gryffindoor" type="TextureButton" parent="ScrollContainer/VSplitContainer/Houses/GridContainer"]
+margin_right = 218.0
+margin_bottom = 241.0
+rect_pivot_offset = Vector2( -577, -86 )
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 9 )
+utterance = "Gryffindoor"
+
+[node name="Hufflepuff" type="TextureButton" parent="ScrollContainer/VSplitContainer/Houses/GridContainer"]
+margin_left = 222.0
+margin_right = 440.0
+margin_bottom = 241.0
+rect_pivot_offset = Vector2( -577, -86 )
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 7 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 9 )
+utterance = "Hufflepuff"
+
+[node name="Ravenclaw" type="TextureButton" parent="ScrollContainer/VSplitContainer/Houses/GridContainer"]
+margin_left = 444.0
+margin_right = 662.0
+margin_bottom = 241.0
+rect_pivot_offset = Vector2( -577, -86 )
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 9 )
+utterance = "Ravenclaw"
+
+[node name="Slytherin" type="TextureButton" parent="ScrollContainer/VSplitContainer/Houses/GridContainer"]
+margin_left = 666.0
+margin_right = 884.0
+margin_bottom = 241.0
+rect_pivot_offset = Vector2( -577, -86 )
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture_normal = ExtResource( 8 )
+expand = true
+stretch_mode = 5
+script = ExtResource( 9 )
+utterance = "Slytherin"
+
+[node name="Other" type="MarginContainer" parent="ScrollContainer/VSplitContainer"]
+margin_top = 253.0
+margin_right = 1024.0
+margin_bottom = 495.0
+size_flags_vertical = 3
+custom_constants/margin_right = 250
+custom_constants/margin_left = 250
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VSplitContainer/Other"]
+margin_left = 250.0
+margin_right = 774.0
+margin_bottom = 242.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 18
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="ScrollContainer/VSplitContainer/Other/VBoxContainer"]
+margin_right = 524.0
+margin_bottom = 59.0
+focus_mode = 0
+mouse_filter = 1
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Hmmm"
+script = ExtResource( 9 )
+utterance = "Hmmm"
+
+[node name="Button2" type="Button" parent="ScrollContainer/VSplitContainer/Other/VBoxContainer"]
+margin_top = 77.0
+margin_right = 524.0
+margin_bottom = 136.0
+focus_mode = 0
+mouse_filter = 1
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Not Ravenclaw ey?"
+script = ExtResource( 9 )
+utterance = "NotRavenclaw"
