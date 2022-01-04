@@ -7,7 +7,7 @@
 [ext_resource path="res://images/gryffindor.png" type="Texture" id=6]
 [ext_resource path="res://images/hufflepuff.png" type="Texture" id=7]
 [ext_resource path="res://images/slytherin.png" type="Texture" id=8]
-[ext_resource path="res://images/text_data.gd" type="Script" id=9]
+[ext_resource path="res://scripts/text_data.gd" type="Script" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 58

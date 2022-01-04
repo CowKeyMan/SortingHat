@@ -1,4 +1,3 @@
-
 extends Spatial
 
 onready var main_menu_ui = $MainMenuUI
