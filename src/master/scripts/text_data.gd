@@ -6,6 +6,7 @@ export var utterance = ""
 
 func _ready():
 	self.connect("pressed", self, "_on_self_pressed")
+	self.focus_mode = Control.FOCUS_NONE
 
 func get_text():
 	return utterance

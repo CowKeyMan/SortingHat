@@ -108,8 +108,8 @@ __meta__ = {
 }
 
 [node name="VSplitContainer" type="VSplitContainer" parent="ScrollContainer"]
-margin_right = 1024.0
-margin_bottom = 495.0
+margin_right = 1012.0
+margin_bottom = 1503.0
 mouse_filter = 1
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -119,8 +119,8 @@ __meta__ = {
 }
 
 [node name="Houses" type="MarginContainer" parent="ScrollContainer/VSplitContainer"]
-margin_right = 1024.0
-margin_bottom = 241.0
+margin_right = 1012.0
+margin_bottom = 200.0
 rect_min_size = Vector2( 0, 200 )
 mouse_filter = 1
 size_flags_horizontal = 3
@@ -130,14 +130,14 @@ custom_constants/margin_left = 70
 
 [node name="GridContainer" type="HBoxContainer" parent="ScrollContainer/VSplitContainer/Houses"]
 margin_left = 70.0
-margin_right = 954.0
-margin_bottom = 241.0
+margin_right = 942.0
+margin_bottom = 200.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="Gryffindoor" type="TextureButton" parent="ScrollContainer/VSplitContainer/Houses/GridContainer"]
-margin_right = 218.0
-margin_bottom = 241.0
+margin_right = 215.0
+margin_bottom = 200.0
 rect_pivot_offset = Vector2( -577, -86 )
 mouse_filter = 1
 size_flags_horizontal = 3
@@ -150,9 +150,9 @@ script = ExtResource( 9 )
 utterance = "Gryffindoor"
 
 [node name="Hufflepuff" type="TextureButton" parent="ScrollContainer/VSplitContainer/Houses/GridContainer"]
-margin_left = 222.0
-margin_right = 440.0
-margin_bottom = 241.0
+margin_left = 219.0
+margin_right = 434.0
+margin_bottom = 200.0
 rect_pivot_offset = Vector2( -577, -86 )
 mouse_filter = 1
 size_flags_horizontal = 3
@@ -165,9 +165,9 @@ script = ExtResource( 9 )
 utterance = "Hufflepuff"
 
 [node name="Ravenclaw" type="TextureButton" parent="ScrollContainer/VSplitContainer/Houses/GridContainer"]
-margin_left = 444.0
-margin_right = 662.0
-margin_bottom = 241.0
+margin_left = 438.0
+margin_right = 653.0
+margin_bottom = 200.0
 rect_pivot_offset = Vector2( -577, -86 )
 mouse_filter = 1
 size_flags_horizontal = 3
@@ -180,9 +180,9 @@ script = ExtResource( 9 )
 utterance = "Ravenclaw"
 
 [node name="Slytherin" type="TextureButton" parent="ScrollContainer/VSplitContainer/Houses/GridContainer"]
-margin_left = 666.0
-margin_right = 884.0
-margin_bottom = 241.0
+margin_left = 657.0
+margin_right = 872.0
+margin_bottom = 200.0
 rect_pivot_offset = Vector2( -577, -86 )
 mouse_filter = 1
 size_flags_horizontal = 3
@@ -195,17 +195,18 @@ script = ExtResource( 9 )
 utterance = "Slytherin"
 
 [node name="Other" type="MarginContainer" parent="ScrollContainer/VSplitContainer"]
-margin_top = 253.0
-margin_right = 1024.0
-margin_bottom = 495.0
+margin_top = 212.0
+margin_right = 1012.0
+margin_bottom = 1503.0
+mouse_filter = 1
 size_flags_vertical = 3
-custom_constants/margin_right = 250
-custom_constants/margin_left = 250
+custom_constants/margin_right = 100
+custom_constants/margin_left = 100
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VSplitContainer/Other"]
-margin_left = 250.0
-margin_right = 774.0
-margin_bottom = 242.0
+margin_left = 100.0
+margin_right = 912.0
+margin_bottom = 1291.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 18
@@ -214,26 +215,208 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="ScrollContainer/VSplitContainer/Other/VBoxContainer"]
-margin_right = 524.0
+margin_right = 812.0
 margin_bottom = 59.0
 focus_mode = 0
 mouse_filter = 1
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
-text = "Hmmm"
+text = "And a thirst"
 script = ExtResource( 9 )
-utterance = "Hmmm"
+utterance = "AndAThirst"
 
 [node name="Button2" type="Button" parent="ScrollContainer/VSplitContainer/Other/VBoxContainer"]
 margin_top = 77.0
-margin_right = 524.0
+margin_right = 812.0
 margin_bottom = 136.0
 focus_mode = 0
 mouse_filter = 1
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 3 )
 custom_styles/normal = SubResource( 4 )
-text = "Not Ravenclaw ey?"
+text = "Another Weasley"
 script = ExtResource( 9 )
-utterance = "NotRavenclaw"
+utterance = "AnotherWeasley"
+
+[node name="Button3" type="Button" parent="ScrollContainer/VSplitContainer/Other/VBoxContainer"]
+margin_top = 154.0
+margin_right = 812.0
+margin_bottom = 213.0
+mouse_filter = 1
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Are You Sure You Could Be Great"
+script = ExtResource( 9 )
+utterance = "AreYouSureYouCouldBeGreat"
+
+[node name="Button4" type="Button" parent="ScrollContainer/VSplitContainer/Other/VBoxContainer"]
+margin_top = 231.0
+margin_right = 812.0
+margin_bottom = 290.0
+mouse_filter = 1
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Better Be"
+script = ExtResource( 9 )
+utterance = "BetterBe"
+
+[node name="Button5" type="Button" parent="ScrollContainer/VSplitContainer/Other/VBoxContainer"]
+margin_top = 308.0
+margin_right = 812.0
+margin_bottom = 367.0
+mouse_filter = 1
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "But Where To Put You"
+script = ExtResource( 9 )
+utterance = "ButWhereToPutYou"
+
+[node name="Button6" type="Button" parent="ScrollContainer/VSplitContainer/Other/VBoxContainer"]
+margin_top = 385.0
+margin_right = 812.0
+margin_bottom = 444.0
+mouse_filter = 1
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Hmm Difficult"
+script = ExtResource( 9 )
+utterance = "HmmDifficult"
+
+[node name="Button7" type="Button" parent="ScrollContainer/VSplitContainer/Other/VBoxContainer"]
+margin_top = 462.0
+margin_right = 812.0
+margin_bottom = 521.0
+mouse_filter = 1
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "I Know Just What To Do With You"
+script = ExtResource( 9 )
+utterance = "IKnowJustWhatToDoWithYou"
+
+[node name="Button8" type="Button" parent="ScrollContainer/VSplitContainer/Other/VBoxContainer"]
+margin_top = 539.0
+margin_right = 812.0
+margin_bottom = 598.0
+mouse_filter = 1
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Its All Here In Your Head"
+script = ExtResource( 9 )
+utterance = "ItsAllHereInYourHead"
+
+[node name="Button9" type="Button" parent="ScrollContainer/VSplitContainer/Other/VBoxContainer"]
+margin_top = 616.0
+margin_right = 812.0
+margin_bottom = 675.0
+mouse_filter = 1
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "No"
+script = ExtResource( 9 )
+utterance = "No"
+
+[node name="Button10" type="Button" parent="ScrollContainer/VSplitContainer/Other/VBoxContainer"]
+margin_top = 693.0
+margin_right = 812.0
+margin_bottom = 752.0
+focus_mode = 0
+mouse_filter = 1
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Not A Bad Mind Either"
+script = ExtResource( 9 )
+utterance = "NotABadMindEither"
+
+[node name="Button11" type="Button" parent="ScrollContainer/VSplitContainer/Other/VBoxContainer"]
+margin_top = 770.0
+margin_right = 812.0
+margin_bottom = 829.0
+focus_mode = 0
+mouse_filter = 1
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Not Slytherin Ey"
+script = ExtResource( 9 )
+utterance = "NotSlytherinEy"
+
+[node name="Button12" type="Button" parent="ScrollContainer/VSplitContainer/Other/VBoxContainer"]
+margin_top = 847.0
+margin_right = 812.0
+margin_bottom = 906.0
+mouse_filter = 1
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Oh Yes"
+script = ExtResource( 9 )
+utterance = "OhYes"
+
+[node name="Button13" type="Button" parent="ScrollContainer/VSplitContainer/Other/VBoxContainer"]
+margin_top = 924.0
+margin_right = 812.0
+margin_bottom = 983.0
+mouse_filter = 1
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "OK"
+script = ExtResource( 9 )
+utterance = "OK"
+
+[node name="Button14" type="Button" parent="ScrollContainer/VSplitContainer/Other/VBoxContainer"]
+margin_top = 1001.0
+margin_right = 812.0
+margin_bottom = 1060.0
+mouse_filter = 1
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Plenty Of Courage I See"
+script = ExtResource( 9 )
+utterance = "PlentyOfCourageISee"
+
+[node name="Button15" type="Button" parent="ScrollContainer/VSplitContainer/Other/VBoxContainer"]
+margin_top = 1078.0
+margin_right = 812.0
+margin_bottom = 1137.0
+mouse_filter = 1
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Right Then"
+script = ExtResource( 9 )
+utterance = "RightThen"
+
+[node name="Button16" type="Button" parent="ScrollContainer/VSplitContainer/Other/VBoxContainer"]
+margin_top = 1155.0
+margin_right = 812.0
+margin_bottom = 1214.0
+mouse_filter = 1
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Theres No Doubt About That"
+script = ExtResource( 9 )
+utterance = "TheresNoDoubtAboutThat"
+
+[node name="Button17" type="Button" parent="ScrollContainer/VSplitContainer/Other/VBoxContainer"]
+margin_top = 1232.0
+margin_right = 812.0
+margin_bottom = 1291.0
+mouse_filter = 1
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+text = "Theres Talent"
+script = ExtResource( 9 )
+utterance = "TheresTalent"

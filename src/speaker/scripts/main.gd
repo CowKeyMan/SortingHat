@@ -31,7 +31,7 @@ func _on_Ping_uttering_recieved(result, body):
 	if contents["random_no"] != random_no:
 		random_no = contents["random_no"]
 		var utterance = contents["utterance"]
-		if utterance == "stop":
+		if utterance == "Stop":
 			audio_player.stop()
 		else:
 			audio_player.play_sound(utterance)
